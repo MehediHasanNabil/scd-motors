@@ -1,0 +1,72 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hover-effect {
+  border-radius: 8px;
+}
+
+.hover-effect:hover {
+  background-color: #ececec;
+}
+
+.silde-menu {
+  height: 60vh;
+}
+
+.App {
+  text-align: center;
+}
+
+.serviceAnimation {
+  transition: transform 0.2s linear;
+}
+
+.serviceAnimation:hover {
+  transition: transform 0.5s linear;
+  transform: translateY(-8px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+.serverImgDiv {
+  position: relative;
+  width: 250px;
+  height: auto;
+}
+
+.serverImgBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.8s;
+}
+
+.serverImgDiv:hover .serverImgBtn {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.8s;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
