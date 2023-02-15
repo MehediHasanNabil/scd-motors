@@ -70,3 +70,12 @@ button:disabled {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+a {
+
+  color: #333 !important;
+  text-decoration: none;
+}
+
+.a:hover {
+  text-decoration: underline;
+}

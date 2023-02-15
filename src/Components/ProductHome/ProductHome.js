@@ -1,5 +1,4 @@
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React, { useEffect, useState, useContext } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -47,9 +46,11 @@ const ProductHome = () => {
                 <Card className="shadow">
                   <Card.Img variant="top" src={item.fileName} />
                   <Card.Body>
-                    <Card.Title className="pb-3 fw-bold">
+                    <Link to={`details/${item._id}`}>
+                    <Card.Title className="text-dark pb-3 fw-bold">
                       {item.title}
                     </Card.Title>
+                    </Link>
                     <Card.Text>
                       <small className="text-ellipsis">
                         {item.description}
@@ -62,7 +63,7 @@ const ProductHome = () => {
                         maximumSignificantDigits: 3,
                       }).format(item.price)}
                     </h4>
-                    <Link
+                    {/* <Link
                       to={
                         admin?.email
                           ? ''
@@ -76,7 +77,7 @@ const ProductHome = () => {
                     >
                       <FontAwesomeIcon className="me-1" icon={faShoppingCart} />{' '}
                       Purchase
-                    </Link>
+                    </Link> */}
                   </Card.Body>
                 </Card>
               </Col>

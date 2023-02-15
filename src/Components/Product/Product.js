@@ -2,9 +2,10 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Product = (props) => {
-  const { title, price, fileName, description } = props.products || {};
+  const { _id, title, price, fileName, description } = props.products || {};
 
   // displaying 200 characters of string
   // let result = desc.slice(0, 100) + (desc.length > 100 ? "..." : "");
@@ -24,10 +25,12 @@ const Product = (props) => {
               maximumSignificantDigits: 3,
             }).format(price)}
           </h4>
+          <Link to={`details/${_id}`}>
           <button className="btn btn-danger fw-bold w-100">
-            <FontAwesomeIcon className="me-1" icon={faShoppingCart} />
-            Purchase
+            {/* <FontAwesomeIcon className="me-1" icon={faShoppingCart} /> */}
+            See Details
           </button>
+          </Link>
         </Card.Body>
       </Card>
     </Col>
